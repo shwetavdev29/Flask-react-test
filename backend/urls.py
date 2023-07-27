@@ -11,4 +11,7 @@ blueprint.add_url_rule("/sum", view_func=SumView.as_view("sum"), methods=["POST"
 blueprint.add_url_rule(
     "/concatenate", view_func=ConcatenateView.as_view("concatenate"), methods=["POST"]
 )
-
+blueprint.add_url_rule(
+    "/register", view_func=RegisterView.as_view("register"), methods=["POST"]
+)
+blueprint.add_url_rule("/login", view_func=LoginView.as_view("login"), methods=["POST"])
